@@ -119,12 +119,13 @@ footer a {
 }
 
 /* Disables the zoom in effect to avoid vestibular motion triggers. */
-@media (prefers-reduced-motion: reduce) {
-  .outer-box {
-    transition: none; /* Disable image zoom effect */
+@media (prefers-reduced-motion: no-preference) {
+  .inner-box {
+    transition: transform 0.3s ease;
   }
 
-  .outer-box:hover {
-    transform: none; /* Disable zoom effect */
+  .inner-box:hover {
+    transform: scale(0.95);
   }
 }
+
