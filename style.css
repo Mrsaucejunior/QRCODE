@@ -30,7 +30,7 @@ h1{
   padding: 1rem;
   flex-wrap: wrap;
   border-radius: 0.3125rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* smooth transition for zoom effect */
 }
 
 .outer-box:hover {
@@ -120,11 +120,11 @@ footer a {
 
 /* Disables the zoom in effect to avoid vestibular motion triggers. */
 @media (prefers-reduced-motion: reduce) {
-  .outer-box:hover {
-    transform: none; /* Disable zoom effect */
-  }
-
   .outer-box {
     transition: none; /* Disable image zoom effect */
+  }
+
+  .outer-box:hover {
+    transform: none; /* Disable zoom effect */
   }
 }
